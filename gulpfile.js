@@ -174,11 +174,18 @@ gulp.task('icons', function () {
     .pipe(gulp.dest('./src/img/icons/tmp/'))
 });
 
+// FONTS -----------------------------------------------------------------------
+
+gulp.task('fonts', function () {
+  return gulp.src('./src/fonts/*')
+    .pipe(gulp.dest('./dist/fonts/'));
+});
+
 // COPY ------------------------------------------------------------------------
 
 var FILES_TO_COPY = [
-    './src/*.txt',
-    './favicon.ico'
+  './src/*.txt',
+  './favicon.ico'
 ];
 
 gulp.task('copy', function () {
@@ -188,7 +195,7 @@ gulp.task('copy', function () {
 
 // BUILD -----------------------------------------------------------------------
 
-gulp.task('build', ['jade', 'icons', 'scripts', 'images', 'stylesheets', 'copy'], function () {
+gulp.task('build', ['jade', 'icons', 'scripts', 'images', 'stylesheets', 'fonts', 'copy'], function () {
   browserSync({
     notify: false,
     server: './dist',
