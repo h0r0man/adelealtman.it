@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #FFF;
+  line-height: 1;
+  font-size: 100%;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+/*
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+*/
+}
+
+a { color: #FFF; }
+
+h1 { margin: 0; }
+
+svg {
+  fill: #FFF;
+  max-height: 100%;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+[role=banner] {
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation-name: intro;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+.brand {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.brand svg {
+  width: 46px;
+}
+
+.logo {
+  display: block;
+}
+
+.logo svg {
+  width: 280px;
+}
+
+.sr {
+  position: absolute;
+  left: -999em;
+}
+
+[role=contentinfo] {
+  font-family: 'Unica One', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-transform: uppercase;
+  animation-name: intro;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
