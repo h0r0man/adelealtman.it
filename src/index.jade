@@ -1,0 +1,23 @@
+include _vars.jade
+
+doctype html
+html(lang="it")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    title #{title}
+    meta(name="description", content="#{description}")
+    meta(name="robots", content="index, follow")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#{themeColor}")
+    meta(name="google-site-verification", content="#{googleSiteVerification}")
+    link(rel="stylesheet", href="css/all.css")
+  body
+    include img/icons/tmp/icons.svg
+    
+    include includes/banner.jade
+    include includes/main.jade
+    include includes/footer.jade
+    
+    script(src='js/all.js')
+    include includes/analytics.jade

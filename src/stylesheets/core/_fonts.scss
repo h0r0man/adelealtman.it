@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Karla'), local('Karla-Regular'),
+       url('../fonts/karla-regular-webfont.woff2') format('woff2'),
+       url('../fonts/karla-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Karla Italic'), local('Karla-Italic'),
+       url('../fonts/karla-italic-webfont.woff2') format('woff2'),
+       url('../fonts/karla-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Karla Bold'), local('Karla-Bold'),
+       url('../fonts/karla-bold-webfont.woff2') format('woff2'),
+       url('../fonts/karla-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat-Bold'),
+       url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata'),
+       url('../fonts/inconsolata-regular-webfont.woff2') format('woff2'),
+       url('../fonts/inconsolata-regular-webfont.woff') format('woff');
+}

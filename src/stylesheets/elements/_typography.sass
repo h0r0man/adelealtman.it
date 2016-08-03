@@ -1,0 +1,59 @@
+html
+  font-family: $font-family-1
+
+body
+  font-size: per-font(16)
+  line-height: $line-height-1
+  color: $color-1
+
+p
+  // TODO
+
+a
+  color: $color-1
+  text-decoration: none
+
+  &:active,
+  &:hover
+    color: $color-1
+
+    svg
+      fill: $color-1
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-family-2
+  line-height: $line-height-2
+  font-weight: bold
+  margin-top: em-calc(24) // TODO
+  margin-bottom: em-calc(8) // TODO
+  clear: both
+
+h1
+  font-size: em-calc(36)
+
+  @include media(#{em-calc(640)})
+    font-size: em-calc(48)
+
+  @include media(#{em-calc(960)})
+    font-size: em-calc(64)
+
+h2
+  font-size: em-calc(28)
+
+  @include media(#{em-calc(640)})
+    font-size: em-calc(30)
+
+  @include media(#{em-calc(960)})
+    font-size: em-calc(36)
+
+h3
+  font-size: em-calc(28)
+
+h4
+  font-size: em-calc(24)
+
+h5
+  font-size: em-calc(20)
+
+h6
+  font-size: em-calc(18)
