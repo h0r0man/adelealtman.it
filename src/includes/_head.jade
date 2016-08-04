@@ -1,0 +1,48 @@
+head
+  meta(charset="utf-8")
+  meta(http-equiv="x-ua-compatible", content="ie=edge")
+  
+  title #{title}
+  
+  meta(name="description", content="#{description}")
+  meta(name="robots", content="noindex, nofollow")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  
+  //- App
+  meta(name="mobile-web-app-capable", content="yes")
+  meta(name="apple-mobile-web-app-capable", content="yes")
+  meta(name="apple-mobile-web-app-status-bar-style" content="black")
+  meta(name="theme-color" content="#{themeColor}")
+  
+  //- Google
+  meta(name="google-site-verification", content="#{googleSiteVerification}")
+  
+  //- Facebook
+  meta(property="og:title" content="#{title}")
+  meta(property="og:description" content="#{description}")
+  meta(property="og:image" content="#{thumbnail}")
+  meta(property="og:url" content="#{url}")
+  
+  //- Twitter
+  meta(name="twitter:title" content="#{title}")
+  meta(name="twitter:description" content="#{description}")
+  meta(name="twitter:image" content="#{thumbnail}")
+  meta(name="twitter:card" content="summary_large_image")
+
+  //- Windows
+  meta(name="application-name" content="#{title}")
+  meta(name="msapplication-square70x70logo" content="/img/win/small.jpg")
+  meta(name="msapplication-square150x150logo" content="/img/win/medium.jpg")
+  meta(name="msapplication-wide310x150logo" content="/img/win/wide.jpg")
+  meta(name="msapplication-square310x310logo" content="/img/win/large.jpg")
+  meta(name="msapplication-TileColor" content="#000000")
+
+  //- iOS
+  link(rel="apple-touch-icon" href="/img/ios/touch-icon-60.png")
+  link(rel="apple-touch-icon" sizes="76x76" href="/img/ios/touch-icon-76.png")
+  link(rel="apple-touch-icon" sizes="120x120" href="/img/ios/touch-icon-120.png")
+  link(rel="apple-touch-icon" sizes="152x152" href="/img/ios/touch-icon-152.png")
+
+  link(rel="shortcut icon" href="/favicon.ico")
+
+  link(rel="stylesheet", href="/css/all.css")
