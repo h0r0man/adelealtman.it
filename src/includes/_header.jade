@@ -1,5 +1,14 @@
-span.fade Gsap
+header.header#header(role="banner")
 
-header(role="banner")
-  h1
-    a(href="/") #{title}
+  div.header__logo
+    h1.header__title
+      a.header__link.header__link--logo(href="/")
+        span.sr-only #{title}
+        svg
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo")
+
+  div.header__nav
+    a.header__link.header__link--open(href="#navigation")
+      span.sr-only Menu
+      svg
+        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nav")

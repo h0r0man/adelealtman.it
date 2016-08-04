@@ -184,6 +184,13 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./dist/fonts/'));
 });
 
+// SVGS ------------------------------------------------------------------------
+
+gulp.task('svgs', function () {
+  return gulp.src('./src/img/*.svg')
+    .pipe(gulp.dest('./dist/img/'));
+});
+
 // COPY ------------------------------------------------------------------------
 
 var FILES_TO_COPY = [
@@ -198,7 +205,7 @@ gulp.task('copy', function () {
 
 // BUILD -----------------------------------------------------------------------
 
-gulp.task('build', ['jade', 'icons', 'scripts', 'images', 'stylesheets', 'fonts', 'copy'], function () {
+gulp.task('build', ['jade', 'icons', 'scripts', 'images', 'stylesheets', 'fonts', 'svgs', 'copy'], function () {
   browserSync({
     notify: false,
     server: './dist',

@@ -1,0 +1,29 @@
+nav.nav#navigation(role="navigation")
+
+  ul.nav__items
+    li.nav__item
+      a.nav__link(href="#") Home
+    li.nav__item
+      a.nav__link(href="#") Chi Siamo
+    li.nav__item
+      a.nav__link(href="#") Negozi
+    li.nav__item
+      a.nav__link(href="#") Lavora con noi
+
+  ul.nav__social-items
+    li.nav__social-item
+      a.nav__social-link(href="#")
+        span.sr-only Instagram
+        svg
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram")
+
+    li.nav__social-item
+      a.nav__social-link(href="#")
+        span.sr-only Facebook
+        svg
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook")
+
+  a.nav__btn--close-2(href="#" rel="nofollow")
+    span.sr-only Chiudi menu  
+    svg
+      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nav-close")
