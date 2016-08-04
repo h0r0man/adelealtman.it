@@ -1,0 +1,43 @@
+.page
+  position: relative
+  background-image: url(../img/02.jpg)
+  background-position: top center
+  background-size: cover
+  height: 100vh
+  padding: em-calc(110) em-calc(20)
+
+  @include media(#{em-calc(640)})
+    padding-left: em-calc(24)
+    padding-right: em-calc(24)
+
+  @include media(#{em-calc(960)})
+    padding: em-calc(130) em-calc(32)
+
+  .sub
+    font-family: $font-family-3
+    font-size: em-calc(14)
+    text-transform: uppercase
+
+  h1
+    margin-top: rem-calc(8)
+    margin-bottom: rem-calc(32)
+
+  p
+    font-size: em-calc(14)
+    max-width: em-calc(640)
+
+  &__content
+    position: relative
+    z-index: 2
+
+    @include media(#{em-calc(960)})
+      font-size: per-font(18)
+
+  .overlay
+    background: rgba(0,0,0,0.5)
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1

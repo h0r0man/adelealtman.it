@@ -1,0 +1,26 @@
+include ../_vars.jade
+- var title = "Chi siamo – Adele Altman";
+
+doctype html
+html(lang="it")
+  include ../includes/_head.jade
+  body
+    include ../img/icons/tmp/icons.svg
+
+    include ../includes/_header.jade
+    include ../includes/_nav.jade
+    
+    div.page
+      div.page__content
+        p.sub Varius Nisi
+        h1
+          | Campaign
+          br
+          | F/W 2016
+        p Tincidunt lacus. Proin dictum mattis feugiat. Nunc a finibus ex. Vestibulum pharetra leo nec lorem dapibus euismod. Aliquam hendrerit lacus vel neque dapibus suscipit. Aliquam semper augue eu quam efficitur, at volutpat dui consequat. Quisque lobortis quis risus in feugiat. Nam tristique, neque a scelerisque convallis, risus quam gravida nibh, vel scelerisque augue magna quis justo.
+      span.overlay
+    
+    include ../includes/_footer.jade
+
+    script(src='/js/all.js')
+    include ../includes/_analytics.jade
