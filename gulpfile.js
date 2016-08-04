@@ -3,9 +3,11 @@
 var gulp          = require('gulp'),
     plumber       = require('gulp-plumber'),
     path          = require('path'),
-    del           = require('del');
+    del           = require('del'),
+    ghPages       = require('gulp-gh-pages');
 
-var jade          = require('gulp-jade');
+var jade          = require('gulp-jade'),
+    htmlmin       = require('gulp-htmlmin');
 
 var imageResize   = require('gulp-image-resize'),
     parallel      = require('concurrent-transform'),
@@ -49,6 +51,7 @@ gulp.task('jade', function() {
     .pipe(jade({
       locals: YOUR_LOCALS
     }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -215,4 +218,11 @@ gulp.task('watch', function () {
 
 gulp.task('default', function () {
   gulp.start('clean', 'build', 'watch');
+});
+
+// DEPLOY ----------------------------------------------------------------------
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
