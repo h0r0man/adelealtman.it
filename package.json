@@ -1,12 +1,23 @@
 {
-  "name": "Adele Altman",
-  "version": "1.0",
-  "description": "",
-  "private": true,
+  "name": "adelealtman.it",
+  "version": "1.0.0",
+  "description": "## Local Installation and Development",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/h0r0man/adelealtman.it.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h0r0man/adelealtman.it/issues"
+  },
+  "homepage": "https://github.com/h0r0man/adelealtman.it#readme",
   "devDependencies": {
     "browser-sync": "^2.12.7",
     "concurrent-transform": "^1.0.0",
