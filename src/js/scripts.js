@@ -105,7 +105,7 @@ $(document).ready(function() {
       TweenLite.from(brand, 2, {opacity: 0, delay: 1});
       TweenLite.from(logo, 2, {opacity: 0, delay: 2});
       TweenLite.to(intro, 2, {opacity: 0, delay: 8});
-      TweenLite.to(intro, 2, {display: 'none', delay: 10});
+      TweenLite.to(intro, 2, {display: 'none', delay: 8});
 
       // TweenLite.to(intro, 1, {y: '100%', delay: 4});
       // TweenLite.to(intro, 1, {y: '100%', delay: 4});
