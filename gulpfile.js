@@ -103,39 +103,6 @@ gulp.task('scripts-watch', ['scripts'], reload);
 
 // RESIZE ----------------------------------------------------------------------
 
-gulp.task('640', function () {
-  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
-    .pipe(plumber())
-    .pipe(parallel(
-      imageResize({ width : 640 }),
-      os.cpus().length
-    ))
-    .pipe(rename(function (path) { path.basename += "-640"; }))
-    .pipe(gulp.dest('./dist/img'));
-});
-
-gulp.task('960', function () {
-  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
-    .pipe(plumber())
-    .pipe(parallel(
-      imageResize({ width : 960 }),
-      os.cpus().length
-    ))
-    .pipe(rename(function (path) { path.basename += "-960"; }))
-    .pipe(gulp.dest('./dist/img'));
-});
-
-gulp.task('1280', function () {
-  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
-    .pipe(plumber())
-    .pipe(parallel(
-      imageResize({ width : 1280 }),
-      os.cpus().length
-    ))
-    .pipe(rename(function (path) { path.basename += "-1280"; }))
-    .pipe(gulp.dest('./dist/img'));
-});
-
 gulp.task('1440', function () {
   return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
     .pipe(plumber())
@@ -180,7 +147,7 @@ gulp.task('2560', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('images-resize', ['640', '960', '1280', '1440', '1680', '1920', '2560']);
+gulp.task('images-resize', ['1440', '1680', '1920', '2560']);
 
 // IMAGES ----------------------------------------------------------------------
 
