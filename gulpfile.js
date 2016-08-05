@@ -103,7 +103,18 @@ gulp.task('scripts-watch', ['scripts'], reload);
 
 // RESIZE ----------------------------------------------------------------------
 
-gulp.task('resize-1x', function () {
+gulp.task('640', function () {
+  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
+    .pipe(plumber())
+    .pipe(parallel(
+      imageResize({ width : 640 }),
+      os.cpus().length
+    ))
+    .pipe(rename(function (path) { path.basename += "-640"; }))
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('960', function () {
   return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
     .pipe(plumber())
     .pipe(parallel(
@@ -114,7 +125,18 @@ gulp.task('resize-1x', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('resize-1.5x', function () {
+gulp.task('1280', function () {
+  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
+    .pipe(plumber())
+    .pipe(parallel(
+      imageResize({ width : 1280 }),
+      os.cpus().length
+    ))
+    .pipe(rename(function (path) { path.basename += "-1280"; }))
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('1440', function () {
   return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
     .pipe(plumber())
     .pipe(parallel(
@@ -125,7 +147,18 @@ gulp.task('resize-1.5x', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('resize-2x', function () {
+gulp.task('1680', function () {
+  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
+    .pipe(plumber())
+    .pipe(parallel(
+      imageResize({ width : 1680 }),
+      os.cpus().length
+    ))
+    .pipe(rename(function (path) { path.basename += "-1680"; }))
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('1920', function () {
   return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
     .pipe(plumber())
     .pipe(parallel(
@@ -136,7 +169,18 @@ gulp.task('resize-2x', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('images-resize', ['resize-1x', 'resize-1.5x', 'resize-2x']);
+gulp.task('2560', function () {
+  return gulp.src('./src/img/*{jpg,JPG,jpeg,JPEG}')
+    .pipe(plumber())
+    .pipe(parallel(
+      imageResize({ width : 2560 }),
+      os.cpus().length
+    ))
+    .pipe(rename(function (path) { path.basename += "-2560"; }))
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('images-resize', ['640', '960', '1280', '1440', '1680', '1920', '2560']);
 
 // IMAGES ----------------------------------------------------------------------
 
@@ -144,7 +188,7 @@ gulp.task('images-compress', function () {
   return gulp.src(['./src/img/**/*{gif,GIF,jpg,JPG,jpeg,JPEG,png,PNG}'])
     .pipe(plumber())
     .pipe(imagemin({
-      optimizationLevel: 5,
+      // optimizationLevel: 5,
       progressive: true,
       interlaced: true
     }))
