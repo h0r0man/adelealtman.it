@@ -82,7 +82,7 @@ gulp.task('stylesheets', function () {
       precision: 6
     }).on('error', sass.logError))
     .pipe(combineMq())
-    .pipe(shorthand())
+    // .pipe(shorthand())
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(cssnano())
     .pipe(gulp.dest('./dist/css/'))
