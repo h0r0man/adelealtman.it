@@ -20,4 +20,15 @@
 @import "components/intro"
 @import "components/swiper"
 @import "components/page"
+@import "components/shop"
+@import "components/work"
 @import "components/footer"
+
+.fade
+  opacity: 0
+  transform: scale(1.1)
+  transition: opacity 750ms ease-out, transform 250ms ease-out, background 250ms ease
+
+  &.fade--in
+    transform: scale(1)
+    opacity: 1

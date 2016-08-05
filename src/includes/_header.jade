@@ -4,7 +4,9 @@ header.header#header(role="banner")
     h1.header__title
       a.header__link.header__link--logo(href="/")
         span.sr-only #{title}
-        svg
+        svg.header__brand--svg
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#brand")
+        svg.header__logo--svg
           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo")
 
   div.header__nav

@@ -4,13 +4,16 @@ include _vars.jade
 doctype html
 html(lang="it")
   include includes/_head.jade
-  body
+  style.
+    html, body {
+      height: -webkit-calc(100% - 0px);
+    }
+
+  body.fade
     include img/icons/tmp/icons.svg
     
     include includes/_header.jade
     include includes/_nav.jade
-
-    
 
     //- intro
     div.intro

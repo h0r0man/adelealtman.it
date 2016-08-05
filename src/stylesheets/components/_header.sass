@@ -3,7 +3,7 @@
   opacity: 0
 
   &__logo
-    position: fixed
+    position: absolute
     left: 0
     top: 0
     z-index: 4
@@ -13,7 +13,7 @@
       height: em-calc(18)
 
   &__nav
-    position: fixed
+    position: absolute
     z-index: 4
     right: 0
     top: 0
@@ -40,7 +40,7 @@
       padding: em-calc(32)
 
     &--logo
-      padding: em-calc(28) em-calc(20)
+      padding: em-calc(24) em-calc(20)
 
       @include media(#{em-calc(640)})
         padding: em-calc(32) em-calc(24)
@@ -51,3 +51,19 @@
   &__link--open
     .nav--open &
       opacity: 0
+
+
+  &__brand--svg
+    width: em-calc(46) !important
+    height: em-calc(34) !important
+
+    @include media(#{em-calc(640)})
+      width: em-calc(24) !important
+      height: em-calc(18) !important
+      margin-right: 1em
+
+  &__logo--svg
+    display: none
+
+    @include media(#{em-calc(640)})
+      display: inline-block

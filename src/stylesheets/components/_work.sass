@@ -1,23 +1,20 @@
-.page-page
-  background-image: url(../img/02-1440.jpg)
+.work-page
+  background-image: url(../img/06-1440.jpg)
   background-repeat: no-repeat
   background-size: cover
   background-attachment: fixed !important
   background-position: center top
 
   @include media(#{em-calc(640)})
-    background-image: url(../img/02-1680.jpg)
+    background-image: url(../img/06-1680.jpg)
 
   @include media(#{em-calc(960)})
-    background-image: url(../img/02-1920.jpg)
-
-  @include media(max-width #{em-calc(960)})
-    background-position: 94% top !important
+    background-image: url(../img/06-1920.jpg)
 
   @include media(#{em-calc(1280)})
-    background-image: url(../img/02-2560.jpg)
+    background-image: url(../img/06-2560.jpg)
 
-.page
+.work
   position: relative
   min-height: 100vh
   padding: em-calc(110) em-calc(20)
@@ -57,3 +54,16 @@
     right: 0
     top: 0
     z-index: 1
+
+.btn
+  border: 1px solid $color-1
+  padding: 0.25em 1em
+  margin-bottom: 0.5em
+  display: inline-block
+  border-radius: 4px
+  transition: all 250ms ease-in
+
+  &:hover,
+  &:focus
+    background-color: $color-1
+    color: $color-2

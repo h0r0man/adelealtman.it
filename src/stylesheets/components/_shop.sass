@@ -1,0 +1,120 @@
+.shop-page
+  background-image: url(../img/05-1440.jpg)
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  background-attachment: fixed !important
+
+  @include media(#{em-calc(640)})
+    background-image: url(../img/05-1680.jpg)
+
+  @include media(#{em-calc(960)})
+    background-image: url(../img/05-1920.jpg)
+
+  @include media(max-width #{em-calc(960)})
+    background-position: 22% top !important
+
+  @include media(#{em-calc(1280)})
+    background-image: url(../img/05-2560.jpg)
+
+.shop
+  position: relative
+  min-height: 100vh
+  padding: em-calc(110) em-calc(20)
+
+  @include media(#{em-calc(640)})
+    padding-left: em-calc(24)
+    padding-right: em-calc(24)
+
+  @include media(#{em-calc(960)})
+    padding: em-calc(130) em-calc(32)
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .sub
+    font-family: $font-family-3
+    font-size: em-calc(14)
+    text-transform: uppercase
+
+  h2
+    margin-top: rem-calc(8)
+    margin-bottom: rem-calc(16)
+
+  p
+    font-size: em-calc(14)
+    margin: 0
+
+  &__items
+    position: relative
+    z-index: 2
+    text-align: center
+    width: 100%
+
+    @include media(#{em-calc(960)})
+      font-size: per-font(18)
+
+  &__item
+    margin-bottom: em-calc(32)
+
+    @include media(#{em-calc(640)})
+      width: 50%
+      float: left
+      box-sizing: border-box
+      margin-bottom: em-calc(48)
+
+    @include media(min-width #{em-calc(640)} max-width #{em-calc(960)})
+
+      &:nth-child(2n+1)
+        clear: left
+        padding-right: em-calc(10)
+
+        @include media(#{em-calc(640)})
+          padding-right: em-calc(12)
+
+        @include media(#{em-calc(960)})
+          padding-right: em-calc(16)
+
+      &:nth-child(2n+2)
+        clear: right
+        padding-left: em-calc(10)
+
+        @include media(#{em-calc(640)})
+          padding-left: em-calc(12)
+
+        @include media(#{em-calc(960)})
+          padding-left: em-calc(16)
+
+    @include media(#{em-calc(960)})
+      width: 33.333333%
+      margin-bottom: em-calc(64)
+
+      &:nth-child(3n+1)
+        clear: left
+        padding-right: em-calc(10)
+
+        @include media(#{em-calc(640)})
+          padding-right: em-calc(12)
+
+        @include media(#{em-calc(960)})
+          padding-right: em-calc(16)
+
+      &:nth-child(3n+2),
+      &:nth-child(3n+3)
+        clear: right
+        padding-left: em-calc(10)
+
+        @include media(#{em-calc(640)})
+          padding-left: em-calc(12)
+
+        @include media(#{em-calc(960)})
+          padding-left: em-calc(16)
+
+  .overlay
+    background: rgba(0,0,0,0.5)
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1

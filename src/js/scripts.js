@@ -84,6 +84,8 @@ $(document).ready(function() {
 
   // ANIMATIONS ----------------------------------------------------------------
 
+  $('body').addClass('fade--in');
+
   animationsInit();
 
   function animationsInit() {
@@ -139,3 +141,7 @@ $(document).ready(function() {
   };
 
 });
+
+// $(window).load(function() {
+//   //
+// });
