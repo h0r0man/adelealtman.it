@@ -15,6 +15,12 @@
   &__content
     text-align: center
 
+    @include media(#{em-calc(640)})
+      font-size: per-font(20)
+
+    @include media(#{em-calc(960)})
+      font-size: per-font(24)
+
   &__brand
     margin-bottom: em-calc(8)
 
