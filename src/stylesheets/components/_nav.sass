@@ -5,11 +5,14 @@
   bottom: 0
   top: 0
   background-color: rgba($color-2, 0.75)
-  width: 50%
+  width: 100%
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
   transform: translate3d(100%, 0, 0)
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1)
+
+  @include media(#{em-calc(640)})
+    width: 50%
 
   @include media(#{em-calc(960)})
     width: em-calc(320)
@@ -27,9 +30,13 @@
 
   &__link
     display: block
-    padding: em-calc(14) em-calc(32)
     transition: background 150ms ease-in-out
+    padding: em-calc(14) em-calc(20)
 
+    @include media(#{em-calc(640)})
+      padding: em-calc(14) em-calc(32)
+
+    &--current,
     &:hover,
     &:focus
       background-color: rgba($color-1, 0.12)

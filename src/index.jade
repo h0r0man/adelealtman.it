@@ -1,4 +1,5 @@
 include _vars.jade
+- var homePage = true
 
 doctype html
 html(lang="it")
@@ -8,6 +9,8 @@ html(lang="it")
     
     include includes/_header.jade
     include includes/_nav.jade
+
+    
 
     //- intro
     div.intro
@@ -29,6 +32,7 @@ html(lang="it")
         div.swiper-slide.slide-4(style="background-image:url(/img/04.jpg)")
         div.swiper-slide.slide-5(style="background-image:url(/img/05.jpg)")
         div.swiper-slide.slide-6(style="background-image:url(/img/06.jpg)")
+        div.swiper-slide.slide-7(style="background-image:url(/img/00.jpg)")
       div.swiper-pagination.swiper-pagination-white
       div.swiper-button-next.swiper-button-white
       div.swiper-button-prev.swiper-button-white

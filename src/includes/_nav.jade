@@ -2,13 +2,25 @@ nav.nav#navigation(role="navigation")
 
   ul.nav__items
     li.nav__item
-      a.nav__link(href="/") Home
+      if homePage
+        a.nav__link.nav__link--current(href="/") Home
+      else
+        a.nav__link(href="/") Home
     li.nav__item
-      a.nav__link(href="/chi-siamo/") Chi Siamo
+      if aboutPage
+        a.nav__link.nav__link--current(href="/chi-siamo/") Chi Siamo
+      else
+        a.nav__link(href="/chi-siamo/") Chi Siamo
     li.nav__item
-      a.nav__link(href="/chi-siamo/") Negozi
+      if shopPage
+        a.nav__link.nav__link--current(href="/chi-siamo/") Negozi
+      else
+        a.nav__link(href="/chi-siamo/") Negozi
     li.nav__item
-      a.nav__link(href="/chi-siamo/") Lavora con noi
+      if workPage
+        a.nav__link.nav__link--current(href="/chi-siamo/") Lavora con noi
+      else
+        a.nav__link(href="/chi-siamo/") Lavora con noi
 
   ul.nav__social-items
     li.nav__social-item
