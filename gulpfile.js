@@ -207,7 +207,8 @@ gulp.task('svgs', function () {
 var FILES_TO_COPY = [
   './src/*.txt',
   './src/CNAME',
-  './favicon.ico'
+  './src/favicon.ico',
+  './src/manifest.json'
 ];
 
 gulp.task('copy', function () {
