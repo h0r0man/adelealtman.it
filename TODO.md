@@ -7,3 +7,5 @@
 7. ottimizzare Gsap
 8. aggiungere sitemap
 9. aggiungere il sito a google webmaster
+
+https://github.com/defunkt/jquery-pjax

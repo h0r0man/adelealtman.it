@@ -29,12 +29,18 @@ h1, h2, h3, h4, h5, h6
   clear: both
 
 h1
+  font-size: em-calc(64)
+
+  @include media(#{em-calc(640)})
+    font-size: em-calc(72)
+
+h2
   font-size: em-calc(48)
 
   @include media(#{em-calc(640)})
     font-size: em-calc(64)
 
-h2
+h3
   font-size: em-calc(28)
 
   @include media(#{em-calc(640)})
@@ -43,14 +49,11 @@ h2
   @include media(#{em-calc(960)})
     font-size: em-calc(36)
 
-h3
+h4
   font-size: em-calc(28)
 
-h4
+h5
   font-size: em-calc(24)
 
-h5
-  font-size: em-calc(20)
-
 h6
-  font-size: em-calc(18)
+  font-size: em-calc(20)
