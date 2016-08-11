@@ -7,36 +7,38 @@ html(lang="it")
   body.fade
     include img/icons/tmp/icons.svg
     
-    include includes/_header.jade
-    include includes/_nav.jade
+    div.app
+      div.app__content
+        include includes/_header.jade
+        include includes/_nav.jade
 
-    //- intro
-    div.intro
-      div.intro__content
-        h2.sr-only #{description}
-        div.intro__brand
-          svg
-            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#brand")
-        div.intro__logo
-          svg
-            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo")
+        //- intro
+        div.intro
+          div.intro__content
+            h2.sr-only #{description}
+            div.intro__brand
+              svg
+                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#brand")
+            div.intro__logo
+              svg
+                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo")
 
-    //- carousell
+        //- carousell
 
-    div.swiper-container
-      div.swiper-wrapper
-        div.swiper-slide.slide-1
-        div.swiper-slide.slide-2
-        div.swiper-slide.slide-3
-        div.swiper-slide.slide-4
-        div.swiper-slide.slide-5
-        div.swiper-slide.slide-6
-        div.swiper-slide.slide-7
-      div.swiper-pagination.swiper-pagination-white
-      div.swiper-button-next.swiper-button-white
-      div.swiper-button-prev.swiper-button-white
+        div.swiper-container
+          div.swiper-wrapper
+            div.swiper-slide.slide-1
+            div.swiper-slide.slide-2
+            div.swiper-slide.slide-3
+            div.swiper-slide.slide-4
+            div.swiper-slide.slide-5
+            div.swiper-slide.slide-6
+            div.swiper-slide.slide-7
+          div.swiper-pagination.swiper-pagination-white
+          div.swiper-button-next.swiper-button-white
+          div.swiper-button-prev.swiper-button-white
 
-    include includes/_footer.jade
+        include includes/_footer.jade
 
     script(src='/js/all.js')
     include includes/_analytics.jade

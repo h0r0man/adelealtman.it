@@ -1,21 +1,18 @@
-.shop-page
-  background-image: url(../img/05-1440.jpg)
-  background-repeat: no-repeat
-  background-position: top center
-  background-size: cover
-  background-attachment: fixed !important
+.page-shop
+  .image
+    background-image: url(../img/05-1440.jpg)
 
-  @include media(#{em-calc(640)})
-    background-image: url(../img/05-1680.jpg)
+    @include media(#{em-calc(640)})
+      background-image: url(../img/05-1680.jpg)
 
-  @include media(#{em-calc(960)})
-    background-image: url(../img/05-1920.jpg)
+    @include media(#{em-calc(960)})
+      background-image: url(../img/05-1920.jpg)
 
-  @include media(max-width #{em-calc(960)})
-    background-position: 22% top !important
+    @include media(max-width #{em-calc(960)})
+      background-position: 22% top !important
 
-  @include media(#{em-calc(1280)})
-    background-image: url(../img/05-2560.jpg)
+    @include media(#{em-calc(1280)})
+      background-image: url(../img/05-2560.jpg)
 
 .shop
   position: relative
@@ -37,7 +34,7 @@
     font-size: em-calc(14)
     text-transform: uppercase
 
-  h2
+  h3
     margin-top: rem-calc(8)
     margin-bottom: rem-calc(16)
 
@@ -109,12 +106,3 @@
 
         @include media(#{em-calc(960)})
           padding-left: em-calc(16)
-
-  .overlay
-    background: rgba(0,0,0,0.5)
-    bottom: 0
-    left: 0
-    position: absolute
-    right: 0
-    top: 0
-    z-index: 1

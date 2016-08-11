@@ -1,17 +1,20 @@
-.page-work
+.page-about
   .image
-    background-image: url(../img/04-1440.jpg)
+    background-image: url(../img/02-1440.jpg)
 
     @include media(#{em-calc(640)})
-      background-image: url(../img/04-1680.jpg)
+      background-image: url(../img/02-1680.jpg)
 
     @include media(#{em-calc(960)})
-      background-image: url(../img/04-1920.jpg)
+      background-image: url(../img/02-1920.jpg)
+
+    @include media(max-width #{em-calc(960)})
+      background-position: 94% top !important
 
     @include media(#{em-calc(1280)})
-      background-image: url(../img/04-2560.jpg)
+      background-image: url(../img/02-2560.jpg)
 
-.work
+.about
   position: relative
   min-height: 100vh
   padding: em-calc(110) em-calc(20)
@@ -42,16 +45,3 @@
 
     @include media(#{em-calc(960)})
       font-size: per-font(18)
-
-.btn
-  border: 1px solid $color-1
-  padding: 0.25em 1em
-  margin-bottom: 0.5em
-  display: inline-block
-  border-radius: 4px
-  transition: all 250ms ease-in
-
-  &:hover,
-  &:focus
-    background-color: $color-1
-    color: $color-2

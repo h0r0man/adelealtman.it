@@ -1,39 +1,44 @@
 include ../_vars.jade
-- var title       = "Negozi – Adele Altman"
+- var pageTitle  = "Negozi – Adele Altman"
 - var shopPage   = true
 
 doctype html
 html(lang="it")
   include ../includes/_head.jade
-  body.shop-page.fade
+  body.page-shop.fade
     include ../img/icons/tmp/icons.svg
 
-    include ../includes/_header.jade
-    include ../includes/_nav.jade
-    
-    div.shop
-      div.shop__items
-      
-        mixin shopItem(sub,link,address, p1, tel1, tel2)
-          div.shop__item
-            p.sub #{sub}
-            h2
-              a(href="#{link}") #{address}
-            p #{p1}
-            p
-              | Tel. 
-              a(href="tel:#{tel1}") #{tel2}
+    div.app
+      div.app__content
+        include ../includes/_header.jade
+        include ../includes/_nav.jade
+        
+        div.shop
+          h2.sr-only Negozi
 
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+35,+00187+Rome,+Italy', 'Via del Corso, 35', '(metro Flaminio-Spagna)', '+39063219668', '+39 063219668')
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+276,+00187+Rome,+Italy', 'Via del Corso, 276', '(piazza Venezia)', '+390631057906', '+39 0631057906')
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+Nazionale+236,+00187+Rome,+Italy', 'Via Nazionale, 236', '(metro Repubblica)', '+390645426658', '+39 0645426658')
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+Nazionale+244,+00187+Rome,+Italy', 'Via Nazionale, 244', '(metro Repubblica)', '+0648905240', '+39 0648905240')
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+delle+Muratte+75,+00187+Rome,+Italy', 'Via delle Muratte, 75', '(Fontana di Trevi)', '+390669924886', '+39 0669924886')
-        +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Tritone+138,+00187+Rome,+Italy', 'Via del Tritone, 138', '(metro Barberini)', '+390642013149', '+39 0642013149')
+          div.shop__items
+          
+            mixin shopItem(sub,link,address, p1, tel1, tel2)
+              div.shop__item
+                p.sub #{sub}
+                h3
+                  a(href="#{link}") #{address}
+                p #{p1}
+                p
+                  | Tel. 
+                  a(href="tel:#{tel1}") #{tel2}
 
-      span.overlay
-    
-    include ../includes/_footer.jade
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+35,+00187+Rome,+Italy', 'Via del Corso, 35', '(metro Flaminio-Spagna)', '+39063219668', '+39 063219668')
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+276,+00187+Rome,+Italy', 'Via del Corso, 276', '(piazza Venezia)', '+390631057906', '+39 0631057906')
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+Nazionale+236,+00187+Rome,+Italy', 'Via Nazionale, 236', '(metro Repubblica)', '+390645426658', '+39 0645426658')
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+Nazionale+244,+00187+Rome,+Italy', 'Via Nazionale, 244', '(metro Repubblica)', '+0648905240', '+39 0648905240')
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+delle+Muratte+75,+00187+Rome,+Italy', 'Via delle Muratte, 75', '(Fontana di Trevi)', '+390669924886', '+39 0669924886')
+            +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Tritone+138,+00187+Rome,+Italy', 'Via del Tritone, 138', '(metro Barberini)', '+390642013149', '+39 0642013149')
+          
+          span.image
+          span.overlay
+
+        include ../includes/_footer.jade
 
     script(src='/js/all.js')
     include ../includes/_analytics.jade
