@@ -1,0 +1,9 @@
+{
+  "name": "Adele Altman",
+  "short_name": "AA",
+  "lang": "it",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#000"
+}
