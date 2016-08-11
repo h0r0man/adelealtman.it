@@ -180,10 +180,13 @@ gulp.task('icons', function () {
         }]
       }
     }))
-    .pipe(svgstore())
-    .pipe(cheerio(function ($) {
-      $('[fill]').removeAttr('fill');
-      $('svg').attr('display', 'none');
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('svg').attr('style', 'display:none');
+      },
+      parserOptions: { xmlMode: true }
     }))
     .pipe(gulp.dest('./src/img/icons/tmp/'))
 });
