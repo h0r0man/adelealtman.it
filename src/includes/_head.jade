@@ -20,13 +20,14 @@ head
   //- Facebook
   meta(property="og:title" content="#{title}")
   meta(property="og:description" content="#{description}")
-  meta(property="og:image" content="#{thumbnail}")
+  meta(property="og:image" content="#{url}#{thumbnail}")
   meta(property="og:url" content="#{url}")
+  meta(property="fb:app_id" content="#{facebookID}")
   
   //- Twitter
   meta(name="twitter:title" content="#{title}")
   meta(name="twitter:description" content="#{description}")
-  meta(name="twitter:image" content="#{thumbnail}")
+  meta(name="twitter:image" content="#{url}#{thumbnail}")
   meta(name="twitter:card" content="summary_large_image")
 
   //- Windows
