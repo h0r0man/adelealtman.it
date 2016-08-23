@@ -34,9 +34,13 @@ html(lang="it")
             div.swiper-slide.slide-5
             div.swiper-slide.slide-6
             div.swiper-slide.slide-7
-          div.swiper-pagination.swiper-pagination-white
-          div.swiper-button-next.swiper-button-white
-          div.swiper-button-prev.swiper-button-white
+          div.swiper-pagination
+          div.swiper-button-next
+            svg
+              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#next")
+          div.swiper-button-prev
+            svg
+              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#prev")
 
         include includes/_footer.jade
 
