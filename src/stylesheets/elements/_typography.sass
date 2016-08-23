@@ -1,5 +1,10 @@
 html
   font-family: $font-family-1
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
 
 body
   font-size: per-font(16)
@@ -18,6 +23,7 @@ a
 
   &:active,
   &:hover
+    outline: 0
     transform: translate3d(2px,0,0)
 
     svg
