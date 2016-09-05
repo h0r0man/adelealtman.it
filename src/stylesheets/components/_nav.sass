@@ -62,6 +62,8 @@
     line-height: 0
     display: block
     transition: opacity 150ms ease-in-out
+    -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .4))
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .4))
 
     &:hover,
     &:focus
@@ -70,8 +72,6 @@
     svg
       width: em-calc(24)
       height: em-calc(24)
-      -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .4))
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .4))
 
   &__btn
     &--close
