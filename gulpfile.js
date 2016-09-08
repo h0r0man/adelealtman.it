@@ -173,9 +173,13 @@ gulp.task('icons', function () {
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
         plugins: [{
+          removeDoctype: true
+        }, {
+          removeComments: true
+        }, {
           cleanupIDs: {
             prefix: prefix + '-',
-            minify: true
+            minify: false
           }
         }]
       }
