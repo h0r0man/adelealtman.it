@@ -21,7 +21,7 @@ var sass          = require('gulp-sass'),
     combineMq     = require('gulp-combine-mq'),
     autoprefixer  = require('gulp-autoprefixer'),
     cssnano       = require('gulp-cssnano'),
-    shorthand     = require('gulp-shorthand'),
+    csscomb       = require('gulp-csscomb'),
     bourbon       = require('node-bourbon').includePaths,
     neat          = require('node-neat').includePaths;
 
@@ -81,9 +81,9 @@ gulp.task('stylesheets', function () {
       includePaths: neat,
       precision: 6
     }).on('error', sass.logError))
-    .pipe(combineMq())
-    // .pipe(shorthand())
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(combineMq())
+    .pipe(csscomb())
     .pipe(cssnano())
     .pipe(gulp.dest('./dist/css/'))
     .pipe(reload({stream: true}));
