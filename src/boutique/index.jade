@@ -1,6 +1,6 @@
 include ../_vars.jade
-- var pageTitle  = "Negozi – Adele Altman"
-- var shopPage   = true
+- var pageTitle    = "Boutique – Adele Altman"
+- var boutiquePage = true
 
 doctype html
 html(lang="it")
@@ -20,13 +20,20 @@ html(lang="it")
           
             mixin shopItem(sub,link,address, p1, tel1, tel2)
               div.shop__item
-                p.sub #{sub}
-                h3
-                  a(href="#{link}") #{address}
-                p #{p1}
-                p
-                  | Tel. 
-                  a(href="tel:#{tel1}") #{tel2}
+                if sub
+                  p.sub #{sub}
+                if address
+                  h3
+                    if link
+                      a(href="#{link}" target="_blank") #{address}
+                    else
+                      | #{address}
+                if p1
+                  p #{p1}
+                if tel1
+                  p
+                    | Tel. 
+                    a(href="tel:#{tel1}") #{tel2}
 
             +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+35,+00187+Rome,+Italy', 'Via del Corso, 35', '(metro Flaminio-Spagna)', '+39063219668', '+39 063219668')
             +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Corso+276,+00187+Rome,+Italy', 'Via del Corso, 276', '(piazza Venezia)', '+390631057906', '+39 0631057906')
@@ -34,6 +41,10 @@ html(lang="it")
             +shopItem('Roma', 'http://maps.google.com/maps?q=Via+Nazionale+244,+00187+Rome,+Italy', 'Via Nazionale, 244', '(metro Repubblica)', '+0648905240', '+39 0648905240')
             +shopItem('Roma', 'http://maps.google.com/maps?q=Via+delle+Muratte+75,+00187+Rome,+Italy', 'Via delle Muratte, 75', '(Fontana di Trevi)', '+390669924886', '+39 0669924886')
             +shopItem('Roma', 'http://maps.google.com/maps?q=Via+del+Tritone+138,+00187+Rome,+Italy', 'Via del Tritone, 138', '(metro Barberini)', '+390642013149', '+39 0642013149')
+
+            +shopItem('Milano', '', 'Opening soon', '', '', '')
+            +shopItem('Parigi', '', 'Opening soon', '', '', '')
+            +shopItem('Berlino', '', 'Opening soon', '', '', '')
           
           span.image
           span.overlay

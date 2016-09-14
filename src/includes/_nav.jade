@@ -8,19 +8,24 @@ nav.nav#navigation(role="navigation")
         a.nav__link(href="/") Home
     li.nav__item
       if aboutPage
-        a.nav__link.nav__link--current(href="/chi-siamo/") Chi Siamo
+        a.nav__link.nav__link--current(href="/history/") History
       else
-        a.nav__link(href="/chi-siamo/") Chi Siamo
+        a.nav__link(href="/history/") History
     li.nav__item
       if shopPage
-        a.nav__link.nav__link--current(href="/negozi/") Negozi
+        a.nav__link.nav__link--current(href="/boutique/") Boutique
       else
-        a.nav__link(href="/negozi/") Negozi
+        a.nav__link(href="/boutique/") Boutique
     li.nav__item
       if workPage
-        a.nav__link.nav__link--current(href="/lavora-con-noi/") Lavora con noi
+        a.nav__link.nav__link--current(href="/work-with-us/") Work With Us
       else
-        a.nav__link(href="/lavora-con-noi/") Lavora con noi
+        a.nav__link(href="/work-with-us/") Work With Us
+    li.nav__item
+      if contactPage
+        a.nav__link.nav__link--current(href="/contacts/") Contacts
+      else
+        a.nav__link(href="/contacts/") Contacts
 
   ul.nav__social-items
     li.nav__social-item
