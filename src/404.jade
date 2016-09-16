@@ -1,0 +1,27 @@
+include _vars.jade
+- var pageTitle   = "404 – Adele Altman"
+
+doctype html
+html(lang="it")
+  include includes/_head.jade
+  body.page-about.fade
+    include img/icons/tmp/icons.svg
+
+    div.app
+      div.app__content
+        include includes/_header.jade
+        include includes/_nav.jade
+
+        div.about
+          div.about__content
+            p.sub Errore 404
+            h2 Non trovato
+            p Ci dispiace, ma non è stato possibile trovare il contenuto che si sta cercando. Si prega di controllare di aver digitato l'URL corretto. Ritorna alla 
+              a(href="/") pagina home.
+          span.image.slide-3
+          span.overlay
+
+        include includes/_footer.jade
+
+    script(src='/js/all.js')
+    include includes/_analytics.jade
