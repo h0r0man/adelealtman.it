@@ -135,7 +135,8 @@ $(document).ready(function() {
       loop: true,
       spaceBetween: 0,
       effect: 'fade',
-      autoplay: 5000
+      autoplay: 5000,
+      autoplayDisableOnInteraction: false
     });
 
   };
