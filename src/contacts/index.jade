@@ -5,7 +5,7 @@ include ../_vars.jade
 doctype html
 html(lang="it")
   include ../includes/_head.jade
-  body.page-about.fade
+  body.fade
     include ../img/icons/tmp/icons.svg
 
     div.app
@@ -13,8 +13,8 @@ html(lang="it")
         include ../includes/_header.jade
         include ../includes/_nav.jade
 
-        div.about
-          div.about__content
+        div.page
+          div.page__content
             p.sub Headquarter
             h2 Contacts
             p
@@ -22,7 +22,7 @@ html(lang="it")
             p
               a(href="http://maps.google.com/maps?q=Via+del+Tritone+138,+00186+Rome,+Italy" target="_blank") Via del Tritone 138 00186, Roma
 
-          span.image
+          span.image.slide-3
           span.overlay
 
         include ../includes/_footer.jade
