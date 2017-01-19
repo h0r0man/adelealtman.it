@@ -18,4 +18,4 @@
 
 ## License
 
-© 2016 [Land HO !](http://www.landhostudio.com/)
+This theme is copyrighted. Non autorizated modification (any of modification of the source code inside this theme folder) of this theme is strongly prohibited.
